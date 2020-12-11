@@ -1,0 +1,32 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/db1?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  mapper-locations: classpath:/mapper/*.xml
+  typeAliasesPackage: com.example.boot.entity
+#    global-config:
+#      #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+##      id-type: 2
+##      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+##      field-strategy: 2
+#      #驼峰下划线转换
+#      db-column-underline: true
+#      #刷新mapper 调试神器
+#      refresh-mapper: true
+
