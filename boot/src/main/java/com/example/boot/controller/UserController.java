@@ -25,7 +25,7 @@ public class UserController {
         userService.addUsers(user);
         List<String> list=new ArrayList<>();
         list.add("cs");
-//        Integer.valueOf(list.get(0));
+        Integer.valueOf(list.get(0));
         return new Result(ResultCode.SUCCESS);
     }
 
