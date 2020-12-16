@@ -6,8 +6,10 @@ import java.util.List;
 
 
 public interface UserService {
-    List<User> usersFuzzyQuery(User puser, Integer current);
-    void addUsers(User puser);
-    Integer updateUser(User puser);
+    List<User> usersFuzzyQuery(User user, Integer current);
+    void addUsers(User user);
+    Integer updateUser(User user);
     Integer deleteUser(Integer id);
+    User getUserByUserName(String userName);
+
 }

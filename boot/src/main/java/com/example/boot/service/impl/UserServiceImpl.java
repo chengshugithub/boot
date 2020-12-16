@@ -7,7 +7,6 @@ import com.example.boot.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,7 +15,7 @@ public class UserServiceImpl  extends ServiceImpl<UserMapper, User> implements U
     private UserMapper userMapper;
     @Override
     public List<User> usersFuzzyQuery(User user, Integer current) {
-        return userMapper.usersFuzzyQuery(user,current);
+        return null;
     }
 
     @Override
@@ -32,5 +31,11 @@ public class UserServiceImpl  extends ServiceImpl<UserMapper, User> implements U
     @Override
     public Integer deleteUser(Integer id) {
         return userMapper.deleteById(id);
+    }
+
+    @Override
+    public User getUserByUserName(String userName) {
+
+        return userMapper.getUserByUserName(userName);
     }
 }

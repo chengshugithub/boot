@@ -5,7 +5,7 @@ import com.example.boot.entity.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+
 
 /**
  * <p>
@@ -17,8 +17,8 @@ import java.util.List;
  */
 @Repository
 public interface UserMapper extends BaseMapper<User> {
+//     List<User> usersFuzzyQuery(@Param("user") User user, @Param("current") Integer current);
+     User getUserByUserName(@Param("username")String username);
 
-     List<User> usersFuzzyQuery(@Param("user") User user, @Param("current") Integer current);
-     void addUsers(User user);
 }
 
